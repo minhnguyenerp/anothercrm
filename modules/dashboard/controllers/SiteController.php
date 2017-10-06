@@ -1,6 +1,6 @@
 <?php
 
-namespace app\controllers;
+namespace app\modules\dashboard\controllers;
 
 use Yii;
 use yii\filters\AccessControl;
@@ -60,6 +60,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+		//$i = 100/0;
+		//throw new \yii\web\HttpException(403, 'The requested Item could not be found.');
         return $this->render('index');
     }
 

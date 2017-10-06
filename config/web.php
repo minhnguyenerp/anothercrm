@@ -10,7 +10,7 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '',
+            'cookieValidationKey' => 'hrirwJb8zov7cOJFiq9rB46CTURskgzg',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -20,7 +20,7 @@ $config = [
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'dashboard/site/error',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
@@ -39,16 +39,23 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
     ],
     'params' => $params,
+	'defaultRoute' => 'dashboard/site/index',
+	'timeZone' => 'America/Los_Angeles',
+	'layout' => 'simple/simple',
+	'language' =>'en-US',
+	'modules' => [
+		'dashboard' => [
+			'class' => 'app\modules\dashboard\Module',
+		],
+	],
 ];
 
 if (YII_ENV_DEV) {

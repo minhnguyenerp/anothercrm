@@ -1,16 +1,31 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+namespace app\modules\dashboard;
+use yii\filters\AccessControl;
 
-/**
- * Description of Module
- *
- * @author Minh Nguyen
- */
-class Module {
-	//put your code here
+class Module extends \yii\base\Module
+{
+    public $controllerNamespace = 'app\modules\dashboard\controllers';
+
+	/*public function behaviors()
+    {
+        return [
+			'access' => [
+				'class' => AccessControl::className(),
+				'rules' => [
+					[
+						'allow' => true,
+						'roles' => ['@'],
+					],
+				],
+			],
+        ];
+    }*/
+	
+    public function init()
+    {
+        parent::init();
+
+        // custom initialization code goes here
+    }
 }
