@@ -46,6 +46,7 @@ $config = [
             ],
         ],
     ],
+	
     'params' => $params,
 	'defaultRoute' => 'dashboard/site/index',
 	'timeZone' => 'America/Los_Angeles',
