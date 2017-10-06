@@ -4,7 +4,7 @@ $params = require(__DIR__ . '/params.php');
 $db = require(__DIR__ . '/db.php');
 
 $config = [
-    'id' => 'basic',
+    'id' => 'another-crm',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
@@ -38,7 +38,20 @@ $config = [
                 ],
             ],
         ],
-        'db' => $db,
+        'db' => [
+			'class' => 'yii\db\Connection',
+			'dsn' => 'mysql:host=localhost;dbname=yii2basic',
+			'username' => 'root',
+			'password' => '',
+			'charset' => 'utf8',
+		],
+		'db_config' => [
+			'class' => 'yii\db\Connection',
+			'dsn' => 'mysql:host=localhost;dbname=yii2basic',
+			'username' => 'root',
+			'password' => '',
+			'charset' => 'utf8',
+		],
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
