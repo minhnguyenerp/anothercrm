@@ -7,16 +7,15 @@
 namespace app\views\layouts\simple;
 use yii\web\AssetBundle;
 
-class Asset extends AssetBundle
+class AppAsset extends AssetBundle
 {
-	public $basePath = '@webroot';
-    public $baseUrl = '@web';
-    public $css = [
+	public $sourcePath = '@app/views/layouts/simple/publish';
+	
+	public $css = [
         'css/site.css',
     ];
-    public $js = [
-    ];
-    public $depends = [
+	
+	public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
     ];
